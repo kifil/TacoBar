@@ -1,36 +1,31 @@
-# ===========================
-# Default Collab Ignore Rules
-# ===========================
+=============== 
+Unity generated
+===============
+Temp/
+Library/
 
-# OS Generated
-# ============
-.DS_Store
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-[Tt]humbs.db
-[Dd]esktop.ini
-
-# Visual Studio / MonoDevelop generated
-# =====================================
-[Ee]xported[Oo]bj/
+=====================================
+Visual Studio / MonoDevelop generated
+=====================================
+ExportedObj/
+obj/
+*.svd
 *.userprefs
-*.csproj
+/*.csproj
 *.pidb
 *.suo
-*.sln
+/*.sln
 *.user
 *.unityproj
 *.booproj
-*.tmp
 
-# Unity generated
-# ===============
-[Oo]bj/
-[Bb]uild
-[Ll]ibrary/
-[Tt]emp/
-sysinfo.txt
-*.stackdump
+============
+OS generated
+============
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
