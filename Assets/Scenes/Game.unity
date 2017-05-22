@@ -118,6 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 38315004}
   - component: {fileID: 38315003}
+  - component: {fileID: 38315005}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -155,6 +156,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &38315005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38315002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e27e4fad34e5ba488ede0ab1e698937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trollArm: {fileID: 2093273225}
 --- !u!1001 &204000622
 Prefab:
   m_ObjectHideFlags: 0
@@ -717,11 +730,11 @@ RectTransform:
   m_Father: {fileID: 1733465903}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 283, y: 252}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 318, y: 79}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1 &1157421038
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +811,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1e4391c9ac6acc4bb3d336be835388d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1454594114 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1005478827275578, guid: ef46bb40bcb97fc47abdaedf59054587,
+    type: 2}
+  m_PrefabInternal: {fileID: 204000622}
+--- !u!114 &1454594115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454594114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e27e4fad34e5ba488ede0ab1e698937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trollArm: {fileID: 1723670714}
 --- !u!1001 &1507410542
 Prefab:
   m_ObjectHideFlags: 0
@@ -848,6 +878,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 099a3b7a94c344647a507da177358aac, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1723670714 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4020096297556286, guid: ef46bb40bcb97fc47abdaedf59054587,
+    type: 2}
+  m_PrefabInternal: {fileID: 204000622}
 --- !u!1 &1733465899
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,11 +1008,11 @@ RectTransform:
   m_Father: {fileID: 1733465903}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -282, y: 252}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 318, y: 79}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1739822280
 MonoBehaviour:
   m_ObjectHideFlags: 0
