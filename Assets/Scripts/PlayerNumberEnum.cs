@@ -8,6 +8,6 @@ public class PlayerNumberEnum  {
 
 public enum PlayerNumber
 {
-    player1,
-    player2
+    player1 = 0,
+    player2 = 1
 }

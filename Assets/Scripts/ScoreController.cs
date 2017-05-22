@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
-    public PlayerNumber myPlayerNumber;
-
     public delegate void ScoreControllerHandler(PlayerNumber playerNum, int newScore);
     public static event ScoreControllerHandler onScoreChanged;
 
-    private int score = 0;
-    private int pointsToWin = 3;
+    private static int[] scores;
 
     void OnEnable()
     {
@@ -23,24 +20,38 @@ public class ScoreController : MonoBehaviour
         ScoreArea.onBallScored -= this.IncreaseScore;
     }
 
+    void Start()
+    {
+        if(scores == null)
+        {
+            SetInitialScores();
+        }
+    }
+
+    //TODO: call this  on start from the menu scene 
+    static void SetInitialScores()
+    {
+        int numberOfPlayers = GameController.GetCurrentPlayerCount();
+        scores = new int[numberOfPlayers];
+        for (int i = 0; i < numberOfPlayers; i++)
+        {
+            scores[i] = 0;
+        }
+    }
+
     void IncreaseScore(PlayerNumber playerNumber)
     {
-        if(playerNumber == myPlayerNumber)
+        scores[(int)playerNumber]++;
+        onScoreChanged(playerNumber, scores[(int)playerNumber]);
+
+        if (scores[(int)playerNumber] >= GameController.GetPointsToWin())
         {
-            score++;
-            onScoreChanged(myPlayerNumber, score);
-            if(score >= pointsToWin)
-            {
-                GameOver();
-            }
+            GameController.TriggerGameOver(playerNumber);
         }
-
     }
 
-    void GameOver()
+    public static int GetScore(PlayerNumber playerNumber)
     {
-        //myPlayerNumber wins!
+        return scores[(int)playerNumber];
     }
-
-
 }

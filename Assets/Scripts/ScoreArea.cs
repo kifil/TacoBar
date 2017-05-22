@@ -13,13 +13,31 @@ public class ScoreArea : MonoBehaviour {
     void Start () {
 	}
 
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && myPlayerNumber == PlayerNumber.player1)
+        {
+            TestAddScore();
+        }
+        if (Input.GetKeyDown(KeyCode.P) && myPlayerNumber == PlayerNumber.player2)
+        {
+            TestAddScore();
+        }
+
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Ball>())
         {
             onBallScored(myPlayerNumber);
-            //have game manager lesten to this event and reset level?
         }
 
+    }
+
+    void TestAddScore()
+    {
+        onBallScored(myPlayerNumber);
     }
 }

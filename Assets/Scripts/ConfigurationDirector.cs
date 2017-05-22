@@ -146,5 +146,6 @@ public class ConfigurationDirector : MonoBehaviour
 		MusicVolume = DefaultMusicVolume;
 		SFXVolume = DefaultSFXVolume;
 	}
-	#endregion
+    #endregion
+
 }
